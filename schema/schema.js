@@ -13,9 +13,7 @@ schema.inv.fg = C('white')
 
 // http://paletton.com/#uid=52Q0u0kkiopKBJ1rSu5d+k46Kft
 
-schema.accent = {}
-schema.accent.fg = fg = C('389940')
-schema.accent.bg = bg = C('18BD23')
+schema.accent = C('B22E2E')
 
 schema.accent__b = {}
 schema.accent__b.fg = fg = C('2C7376')
