@@ -2,4 +2,8 @@
 
 var fs = require('fs-sync')
 
+var schema = require(__dirname + '/../schema/schema')
+
+console.dir(schema)
+
 fs.write(__dirname + '/../gen/gen.css', 'body { background: #f5f5f5; } #hide { display: none; }')
