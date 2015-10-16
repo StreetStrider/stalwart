@@ -9,3 +9,21 @@ body
 	background: {{ bg }};
 	color:      {{ fg }};
 }
+
+.accent .bg
+{
+	background: {{ accent.bg }};
+}
+.accent .fg
+{
+	color: {{ accent.fg }};
+}
+
+.accent__b .bg
+{
+	background: {{ accent__b.bg }};
+}
+.accent__b .fg
+{
+	color: {{ accent__b.fg }};
+}
