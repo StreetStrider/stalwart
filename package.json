@@ -1,0 +1,11 @@
+{
+	"name":    "stalwart",
+	"private": true,
+
+	"version": "0.0.0",
+
+	"scripts":
+	{
+		"gen": "run/gen"
+	}
+}
