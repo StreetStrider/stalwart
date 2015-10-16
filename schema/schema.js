@@ -16,8 +16,8 @@ schema.inv.fg = C('white')
 schema.accent = C('B22E2E')
 
 schema.accent__b = {}
-schema.accent__b.fg = fg = C('2C7376')
-schema.accent__b.bg = bg = C('148B91')
+schema.accent__b.fg = C('2C7376')
+schema.accent__b.bg = C('148B91')
 
 schema.selection = C('F2FF0077')
 schema.highlight = C('15FF0077')
