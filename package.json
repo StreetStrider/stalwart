@@ -7,5 +7,10 @@
 	"scripts":
 	{
 		"gen": "run/gen"
+	},
+
+	"devDependencies":
+	{
+		"fs-sync": "^0.2"
 	}
 }
