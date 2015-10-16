@@ -5,6 +5,6 @@ var C = require('chroma-js')
 
 module.exports =
 {
-	bg: C('f5f5f5'),
+	bg: C('fbfbfb'),
 	fg: C('333')
 }
