@@ -4,6 +4,8 @@ var root = require('rootpath')(__dirname, '..')
 
 var schema = require(root('schema/schema'))
 
+schema = require('./lib/mustz')(schema)
+
 var fs = require('fs-sync')
 
 var csst = fs.read(root('schema/css.template'))

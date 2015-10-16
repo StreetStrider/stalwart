@@ -13,6 +13,7 @@
 	{
 		"chroma-js": "^1.1.1",
 		"mustache": "^2.2",
+		"traverse": "^0.6.6",
 
 		"fs-sync": "^0.2",
 		"rootpath": "StreetStrider/rootpath#v1.4.0"

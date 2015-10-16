@@ -20,3 +20,6 @@ schema.accent.bg = bg = C('18BD23')
 schema.accent__b = {}
 schema.accent__b.fg = fg = C('2C7376')
 schema.accent__b.bg = bg = C('148B91')
+
+schema.selection = C('F2FF0077')
+schema.highlight = C('15FF0077')

@@ -32,3 +32,13 @@ body
 {
 	color: {{ inv.fg }};
 }
+
+.hl
+{
+	background: {{ highlight }};
+}
+
+.sl
+{
+	background: {{ selection }};
+}
