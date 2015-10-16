@@ -1,13 +1,15 @@
 #! /usr/bin/env node
 
+var root = require('rootpath')(__dirname, '..')
+
+var schema = require(root('schema/schema'))
+
 var fs = require('fs-sync')
 
-var schema = require(__dirname + '/../schema/schema')
-
-var csst = fs.read(__dirname + '/../schema/css.template')
+var csst = fs.read(root('schema/css.template'))
 
 var render = require('mustache').render
 
 var css = render(csst, schema)
 
-fs.write(__dirname + '/../gen/gen.css', css)
+fs.write(root('gen/gen.css'), css)
