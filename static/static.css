@@ -9,3 +9,16 @@ body
 {
 	font-family: monospace;
 }
+
+.main
+{
+	font-size: 13px;
+}
+.medium
+{
+	font-size: 150%;
+}
+.big
+{
+	font-size: 200%;
+}

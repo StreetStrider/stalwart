@@ -12,6 +12,7 @@
 	"devDependencies":
 	{
 		"chroma-js": "^1.1.1",
+		"mustache": "^2.2",
 
 		"fs-sync": "^0.2"
 	}

@@ -4,6 +4,10 @@ var fs = require('fs-sync')
 
 var schema = require(__dirname + '/../schema/schema')
 
-console.dir(schema)
+var csst = fs.read(__dirname + '/../schema/css.template')
 
-fs.write(__dirname + '/../gen/gen.css', 'body { background: #f5f5f5; } #hide { display: none; }')
+var render = require('mustache').render
+
+var css = render(csst, schema)
+
+fs.write(__dirname + '/../gen/gen.css', css)
