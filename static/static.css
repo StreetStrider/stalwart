@@ -10,6 +10,11 @@ body
 	font-family: monospace;
 }
 
+.feature
+{
+	margin: 1.25rem;
+}
+
 .main
 {
 	font-size: 13px;
