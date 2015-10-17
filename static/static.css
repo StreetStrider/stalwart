@@ -27,3 +27,8 @@ body
 {
 	font-size: 200%;
 }
+
+.string div
+{
+	margin: .25em;
+}

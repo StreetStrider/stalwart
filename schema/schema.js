@@ -21,3 +21,6 @@ schema.accent__b.bg = C('148B91')
 
 schema.selection = C('F2FF0077')
 schema.highlight = C('15FF0077')
+
+schema.string = {}
+schema.string.bg = C('EADFC2')
