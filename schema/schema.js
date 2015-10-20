@@ -24,3 +24,6 @@ schema.highlight = C('15FF0077')
 
 schema.string = {}
 schema.string.bg = C('FFCF6A')
+
+schema.comment = {}
+schema.comment.bg = C('E8E8E8')

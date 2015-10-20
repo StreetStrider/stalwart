@@ -33,3 +33,8 @@ body
 {
 	background: {{ string.bg }};
 }
+
+.comment span
+{
+	background: {{ comment.bg }};
+}
