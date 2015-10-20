@@ -23,4 +23,4 @@ schema.selection = C('F2FF0077')
 schema.highlight = C('15FF0077')
 
 schema.string = {}
-schema.string.bg = C('EADFC2')
+schema.string.bg = C('FFCF6A')
