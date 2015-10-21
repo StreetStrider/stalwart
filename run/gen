@@ -8,7 +8,7 @@ schema = require('./lib/mustz')(schema)
 
 var fs = require('fs-sync')
 
-var csst = fs.read(root('schema/css.template'))
+var csst = fs.read(root('template/css.mst'))
 
 var mustache = require('mustache')
 
