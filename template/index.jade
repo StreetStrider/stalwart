@@ -38,3 +38,13 @@ html
 		.comment.feature comment:
 			div: span // comment
 			div: span /* comment */
+
+		- colornames = [ 'red', 'green', 'blue', 'cyan', 'magenta', 'yellow', 'white' ]
+		- function bg (name) { return 'background: ' + name + ';' }
+		- function fg (name) { return 'color: ' + name + ';' }
+		table
+			each name in colornames
+				tbody(style='#{bg(name)}')
+					tr
+						each name in colornames
+							td(style='#{fg(name)}') #{name}
