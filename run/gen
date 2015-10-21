@@ -23,3 +23,5 @@ var htmlt = fs.read(root('template/index.jade'))
 var html = jade.render(htmlt)
 
 fs.write(root('gen/index.html'), html)
+
+fs.copy(root('template/static.css'), root('gen/static.css'), { force: true })
