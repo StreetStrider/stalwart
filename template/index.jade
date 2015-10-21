@@ -39,12 +39,14 @@ html
 			div: span // comment
 			div: span /* comment */
 
-		- colornames = [ 'red', 'green', 'blue', 'cyan', 'magenta', 'yellow', 'white' ]
+		- base16 = schema.base16
+		- colornames = base16.names
+		- base16 = base16.colors
 		- function bg (name) { return 'background: ' + name + ';' }
 		- function fg (name) { return 'color: ' + name + ';' }
 		table
 			each name in colornames
-				tbody(style='#{bg(name)}')
+				tbody(style='#{bg(base16[name])}')
 					tr
 						each name in colornames
-							td(style='#{fg(name)}') #{name}
+							td(style='#{fg(base16[name])}') #{name}
