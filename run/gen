@@ -20,7 +20,7 @@ var jade = require('jade')
 
 var htmlt = fs.read(root('template/index.jade'))
 
-var html = jade.render(htmlt)
+var html = jade.render(htmlt, { pretty: true })
 
 fs.write(root('gen/index.html'), html)
 
