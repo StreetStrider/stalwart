@@ -11,8 +11,6 @@ schema.bg = C('fbfbfb')
 schema.inv = {}
 schema.inv.fg = C('white')
 
-// http://paletton.com/#uid=52Q0u0kkiopKBJ1rSu5d+k46Kft
-
 schema.accent = C('CC0025')
 
 schema.accent__b = {}
