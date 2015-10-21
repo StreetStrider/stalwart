@@ -1,0 +1,40 @@
+
+mixin stylesheet (href)
+	link(rel='stylesheet' href='#{href}')
+
+doctype html
+html
+	head
+			meta(charset='utf-8')
+			title stalwart
+
+			+stylesheet('../static/static.css')
+			+stylesheet('gen.css')
+
+	body
+		.main.feature
+			div     abcdef <i>abcdef</i> <b>abcdef</b>
+			.medium abcdef <i>abcdef</i> <b>abcdef</b>
+			.big    abcdef <i>abcdef</i> <b>abcdef</b>
+
+		.accent.feature accent:
+			.fg foreground
+
+		.focus.feature focus:
+			.hl highlight line
+			.hl <b>highlight</b> line
+			.hl <i>highlight</i> line
+			.hl <span class='ac'>highlight</span> line
+
+			.sl selection line
+			.sl <b>selection</b> line
+			.sl <i>selection</i> line
+			.sl <span class='ac'>selection</span> line
+
+		.string.feature string:
+			div: span "string"
+			div: span 'string'
+
+		.comment.feature comment:
+			div: span // comment
+			div: span /* comment */

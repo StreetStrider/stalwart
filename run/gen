@@ -10,8 +10,16 @@ var fs = require('fs-sync')
 
 var csst = fs.read(root('schema/css.template'))
 
-var render = require('mustache').render
+var mustache = require('mustache')
 
-var css = render(csst, schema)
+var css = mustache.render(csst, schema)
 
 fs.write(root('gen/gen.css'), css)
+
+var jade = require('jade')
+
+var htmlt = fs.read(root('template/index.jade'))
+
+var html = jade.render(htmlt)
+
+fs.write(root('gen/index.html'), html)
