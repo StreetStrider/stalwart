@@ -38,8 +38,15 @@ base16.names.forEach(function (name)
 {
 	var c = C(name)
 
-	c = c.desaturate().brighten(.5)
+	c = c.desaturate().brighten(1)
 
-	base16.colors.fg[name] = c
-	base16.colors.bg[name] = c
+	var bg = base16.colors.bg[name] = {}
+	bg.bright = c
+	bg.normal = c.darken()
+
+	c = c.darken(.25)
+
+	var fg = base16.colors.fg[name] = {}
+	fg.bright = c
+	fg.normal = c.darken()
 })
