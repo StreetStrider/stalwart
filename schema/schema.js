@@ -29,9 +29,17 @@ schema.comment.bg = C('E8E8E8')
 var base16 = schema.base16 = {}
 
 base16.names = [ 'red', 'green', 'blue', 'cyan', 'magenta', 'yellow', 'white' ]
+
 base16.colors = {}
+base16.colors.fg = {}
+base16.colors.bg = {}
 
 base16.names.forEach(function (name)
 {
-	base16.colors[name] = C(name)
+	var c = C(name)
+
+	c = c.desaturate().brighten(.5)
+
+	base16.colors.fg[name] = c
+	base16.colors.bg[name] = c
 })

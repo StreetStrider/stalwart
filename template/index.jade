@@ -47,15 +47,19 @@ html
 		table.feature
 			each name in colornames
 				tbody
-					tr(style='#{bg(base16[name])}')
+					tr(style='#{bg(base16.bg[name])}')
 						each name in colornames
-							td(style='#{fg(base16[name])}') #{name}
-					tr(style='#{bg(base16[name])}')
+							td(style='#{fg(base16.fg[name])}') #{name}
+
+					tr(style='#{bg(base16.bg[name])}')
 						each name in colornames
-							td(style='#{fg(base16[name].darken())}') #{name}
-					tr(style='#{bg(base16[name].darken())}')
+							td(style='#{fg(base16.fg[name].darken())}') #{name}
+
+					tr(style='#{bg(base16.bg[name].darken())}')
 						each name in colornames
-							td(style='#{fg(base16[name])}') #{name}
-					tr(style='#{bg(base16[name].darken())}')
+							td(style='#{fg(base16.fg[name])}') #{name}
+
+					tr(style='#{bg(base16.bg[name].darken())}')
 						each name in colornames
-							td(style='#{fg(base16[name].darken())}') #{name}
+							td(style='#{fg(base16.fg[name].darken())}') #{name}
+
