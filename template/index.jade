@@ -46,7 +46,16 @@ html
 		- function fg (name) { return 'color: ' + name + ';' }
 		table
 			each name in colornames
-				tbody(style='#{bg(base16[name])}')
-					tr
+				tbody
+					tr(style='#{bg(base16[name])}')
 						each name in colornames
 							td(style='#{fg(base16[name])}') #{name}
+					tr(style='#{bg(base16[name])}')
+						each name in colornames
+							td(style='#{fg(base16[name].darken())}') #{name}
+					tr(style='#{bg(base16[name].darken())}')
+						each name in colornames
+							td(style='#{fg(base16[name])}') #{name}
+					tr(style='#{bg(base16[name].darken())}')
+						each name in colornames
+							td(style='#{fg(base16[name].darken())}') #{name}
