@@ -44,7 +44,7 @@ html
 		- base16 = base16.colors
 		- function bg (name) { return 'background: ' + name + ';' }
 		- function fg (name) { return 'color: ' + name + ';' }
-		table
+		table.feature
 			each name in colornames
 				tbody
 					tr(style='#{bg(base16[name])}')
