@@ -34,26 +34,13 @@ base16.colors = {}
 base16.colors.fg = {}
 base16.colors.bg = {}
 
-base16.names.forEach(function (name)
-{
-	var c = create16(name)
-
-	c = c.desaturate().brighten(1)
-
-	var bg = base16.colors.bg[name] = {}
-	bg.bright = c
-	bg.normal = c.darken()
-
-	c = c.darken(.25)
-
-	var fg = base16.colors.fg[name] = {}
-	fg.bright = c
-	fg.normal = c.darken()
-})
+base16.names.forEach(create16)
 
 function create16 (name)
 {
 	var c = C(name)
+
+	c = c.desaturate(1.5).brighten(1)
 
 	switch (name)
 	{
@@ -66,12 +53,40 @@ function create16 (name)
 		break;
 
 	case 'blue':
-		c = c.set('hsl.h', '-10')
+		c = C('blue')
+		c = c.set('hsl.h', '-25')
 		break;
 
 	}
 
-	// .set('hsl.h', 0)
+	var it =
+	{
+		bg:  c,
+		bgn: c,
+		fg:  c,
+		fgn: c
+	}
 
-	return c
+	switch (name)
+	{
+	case 'blue':
+		it.bg  = c.brighten(.15)
+		it.bgn = c.darken(.5)
+
+		it.fgn = c.darken(1)
+		break;
+
+	default:
+		it.bgn = it.bg.darken(1)
+		it.fg  = it.bg.darken(.25)
+		it.fgn = it.fg.darken(1)
+	}
+
+	var bg = base16.colors.bg[name] = {}
+	bg.bright = it.bg
+	bg.normal = it.bgn
+
+	var fg = base16.colors.fg[name] = {}
+	fg.bright = it.fg
+	fg.normal = it.fgn
 }
