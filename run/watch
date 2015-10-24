@@ -1,0 +1,14 @@
+#! /usr/bin/env node
+
+var root = require('./lib/rootpath')
+
+var watch = require('glob-watcher')
+
+var paths = [ 'schema/*', 'template/*' ].map(function (path)
+{
+	return root(path)
+})
+
+var cmd = require('command-promise').so
+
+watch(paths, cmd('run/gen', { cwd: root() }))

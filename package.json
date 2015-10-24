@@ -19,6 +19,8 @@
 		"traverse": "^0.6.6",
 
 		"fs-sync": "^1.0.1",
-		"rootpath": "StreetStrider/rootpath#v1.4.0"
+		"rootpath": "StreetStrider/rootpath#v1.4.0",
+		"glob-watcher": "^2",
+		"command-promise": "^2"
 	}
 }

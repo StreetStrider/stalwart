@@ -1,6 +1,6 @@
 #! /usr/bin/env node
 
-var root = require('rootpath')(__dirname, '..')
+var root = require('./lib/rootpath')
 
 var schema = require(root('schema/schema'))
 
