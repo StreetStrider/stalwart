@@ -46,16 +46,17 @@ function create16 (name)
 	{
 	case 'red':
 		c = c.set('hsl.h', '-15')
-		break;
+		break
 
 	case 'green':
-		c = c.set('hsl.h', '+25')
-		break;
+		c = C('green').brighten(1)
+		c = c.set('hsl.h', '+30')
+		break
 
 	case 'blue':
 		c = C('blue')
 		c = c.set('hsl.h', '-25')
-		break;
+		break
 
 	}
 
@@ -69,15 +70,24 @@ function create16 (name)
 
 	switch (name)
 	{
+	case 'green':
+		it.bgn = it.bg.darken(1)
+
+		it.fg  = it.bg.darken(.25)
+		it.fgn = it.fg.darken(1.5)
+		break
+
+
 	case 'blue':
 		it.bg  = c.brighten(.15)
 		it.bgn = c.darken(.5)
 
 		it.fgn = c.darken(1)
-		break;
+		break
 
 	default:
 		it.bgn = it.bg.darken(1)
+
 		it.fg  = it.bg.darken(.25)
 		it.fgn = it.fg.darken(1)
 	}
