@@ -63,33 +63,23 @@ function create16 (name)
 	var it =
 	{
 		bg:  c,
-		bgn: c,
-		fg:  c,
-		fgn: c
+		bgn: c.darken(1),
+		fg:  c.darken( .25),
+		fgn: c.darken(1.25)
 	}
 
 	switch (name)
 	{
 	case 'green':
-		it.bgn = it.bg.darken(1)
-
-		it.fg  = it.bg.darken(.25)
 		it.fgn = it.fg.darken(1.5)
 		break
-
 
 	case 'blue':
 		it.bg  = c.brighten(.15)
 		it.bgn = c.darken(.5)
 
-		it.fgn = c.darken(1)
+		it.fg  = c
 		break
-
-	default:
-		it.bgn = it.bg.darken(1)
-
-		it.fg  = it.bg.darken(.25)
-		it.fgn = it.fg.darken(1)
 	}
 
 	var bg = base16.colors.bg[name] = {}
