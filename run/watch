@@ -11,4 +11,8 @@ var paths = [ 'schema/*', 'template/*' ].map(function (path)
 
 var cmd = require('command-promise').so
 
-watch(paths, cmd('run/gen', { cwd: root() }))
+var gen = cmd('run/gen', { cwd: root() })
+
+watch(paths, gen)
+
+gen()
