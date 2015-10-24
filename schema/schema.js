@@ -58,6 +58,13 @@ function create16 (name)
 		c = c.set('hsl.h', '-25')
 		break
 
+	case 'cyan':
+		c = C('cyan')
+		c = c.set('hsl.h', '-10')
+		c = c.desaturate(.5)
+		c = c.darken(1)
+		break
+
 	}
 
 	var it =
@@ -80,6 +87,12 @@ function create16 (name)
 
 		it.fg  = c
 		break
+
+	case 'cyan':
+		it.fg  = c.darken(.65)
+		it.fgn = c.darken(1.8)
+		break
+
 	}
 
 	var bg = base16.colors.bg[name] = {}
