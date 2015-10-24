@@ -36,7 +36,7 @@ base16.colors.bg = {}
 
 base16.names.forEach(function (name)
 {
-	var c = C(name)
+	var c = create16(name)
 
 	c = c.desaturate().brighten(1)
 
@@ -50,3 +50,28 @@ base16.names.forEach(function (name)
 	fg.bright = c
 	fg.normal = c.darken()
 })
+
+function create16 (name)
+{
+	var c = C(name)
+
+	switch (name)
+	{
+	case 'red':
+		c = c.set('hsl.h', '-15')
+		break;
+
+	case 'green':
+		c = c.set('hsl.h', '+25')
+		break;
+
+	case 'blue':
+		c = c.set('hsl.h', '-10')
+		break;
+
+	}
+
+	// .set('hsl.h', 0)
+
+	return c
+}
