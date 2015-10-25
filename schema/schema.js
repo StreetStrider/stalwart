@@ -74,6 +74,10 @@ function create16 (name)
 		c = c.desaturate(.5)
 		break
 
+	case 'yellow':
+		c = schema.selection
+		c = c.desaturate(.25).darken(.25)
+		break
 	}
 
 	var it =
