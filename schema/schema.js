@@ -40,7 +40,8 @@ function create16 (name)
 {
 	var c = C(name)
 
-	c = c.desaturate(1.5).brighten(1)
+	c = c.desaturate(1.5)
+	c = c.brighten(1)
 
 	switch (name)
 	{
@@ -53,7 +54,8 @@ function create16 (name)
 		break
 
 	case 'green':
-		c = C('green').brighten(1)
+		c = C('green')
+		c = c.brighten(1)
 		c = c.set('hsl.h', '+30')
 		break
 
@@ -64,7 +66,6 @@ function create16 (name)
 
 	case 'cyan':
 		c = C('cyan')
-
 		c = c.desaturate(.5)
 		c = c.darken(1)
 		break
