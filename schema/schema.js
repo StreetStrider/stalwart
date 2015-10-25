@@ -69,6 +69,11 @@ function create16 (name)
 		c = c.darken(1)
 		break
 
+	case 'magenta':
+		c = c.set('hsl.h', '-45')
+		c = c.desaturate(.5)
+		break
+
 	}
 
 	var it =
