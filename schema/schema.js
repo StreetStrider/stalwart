@@ -44,6 +44,10 @@ function create16 (name)
 
 	switch (name)
 	{
+	case 'white':
+		c = schema.bg
+		break
+
 	case 'red':
 		c = c.set('hsl.h', '-15')
 		break
@@ -77,6 +81,13 @@ function create16 (name)
 
 	switch (name)
 	{
+	case 'white':
+		it.bgn = c.darken(.5)
+
+		it.fg  = c.brighten(1)
+		it.fgn = c.brighten(.5)
+		break
+
 	case 'green':
 		it.fgn = it.fg.darken(1.5)
 		break
