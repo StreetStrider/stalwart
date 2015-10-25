@@ -75,8 +75,10 @@ function create16 (name)
 		break
 
 	case 'yellow':
-		c = schema.selection
-		c = c.desaturate(.25).darken(.25)
+		c = C('yellow')
+		c = c.set('hsl.h', '-34')
+		c = c.desaturate(.5)
+		c = c.darken(.25)
 		break
 	}
 
