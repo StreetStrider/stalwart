@@ -30,7 +30,13 @@ body
 	margin: .25em;
 }
 
+table
+{
+	border: 1px solid White;
+	font-size: 65%;
+}
+
 td
 {
-	padding: .5em;
+	padding: .65em;
 }
