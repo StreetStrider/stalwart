@@ -28,7 +28,7 @@ schema.comment.bg = C('E8E8E8')
 
 var base16 = schema.base16 = {}
 
-base16.names = [ 'red', 'green', 'blue', 'cyan', 'magenta', 'yellow', 'white' ]
+base16.names = [ 'white', 'red', 'green', 'blue', 'cyan', 'magenta', 'yellow' ]
 
 base16.colors = {}
 base16.colors.fg = {}
