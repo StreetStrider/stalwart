@@ -38,11 +38,6 @@ base16.names.forEach(create16)
 
 function create16 (name)
 {
-	var c = C(name)
-
-	c = c.desaturate(1.5)
-	c = c.brighten(1)
-
 	switch (name)
 	{
 	case 'white':
@@ -54,6 +49,7 @@ function create16 (name)
 		break
 
 	case 'red':
+		c = schema.accent
 		c = c.set('hsl.h', '-15')
 		break
 
@@ -75,6 +71,9 @@ function create16 (name)
 		break
 
 	case 'magenta':
+		c = C('magenta')
+		c = c.desaturate(1.5)
+		c = c.brighten(1)
 		c = c.set('hsl.h', '-45')
 		c = c.desaturate(.5)
 		break
@@ -85,6 +84,9 @@ function create16 (name)
 		c = c.desaturate(.5)
 		c = c.darken(.25)
 		break
+
+	default:
+		throw null
 	}
 
 	var it =
