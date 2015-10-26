@@ -82,9 +82,10 @@ function create16 (name)
 
 	case 'yellow':
 		c = C('yellow')
-		c = c.set('hsl.h', '-34')
+		// c = c.set('hsl.h', '-45')
+		c = c.set('hsl.h', '+14')
 		c = c.desaturate(.5)
-		c = c.darken(.25)
+		c = c.darken(1)
 		break
 
 	default:
