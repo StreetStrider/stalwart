@@ -75,7 +75,7 @@ function create16 (name)
 	case 'magenta':
 		c = C('magenta')
 		c = c.desaturate(1.5)
-		c = c.brighten(1)
+		c = c.brighten(.25)
 		c = c.set('hsl.h', '-45')
 		c = c.desaturate(.5)
 		break
