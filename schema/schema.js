@@ -28,7 +28,7 @@ schema.comment.bg = C('E8E8E8')
 
 var base16 = schema.base16 = {}
 
-base16.names = [ 'white', 'red', 'green', 'blue', 'cyan', 'magenta', 'yellow' ]
+base16.names = [ 'white', 'black', 'red', 'green', 'blue', 'cyan', 'magenta', 'yellow' ]
 
 base16.colors = {}
 base16.colors.fg = {}
@@ -47,6 +47,10 @@ function create16 (name)
 	{
 	case 'white':
 		c = schema.bg
+		break
+
+	case 'black':
+		c = schema.fg
 		break
 
 	case 'red':
