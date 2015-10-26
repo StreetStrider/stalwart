@@ -1,5 +1,7 @@
 #! /usr/bin/env node
 
+var C = require('chroma-js')
+
 var template =
 [
 	'black',
@@ -35,4 +37,9 @@ seq = seq.join(';')
 
 seq = 'ColorPalette=' + seq
 
-process.stdout.write(seq)
+var fore = 'ColorForeground=' + base16.black.normal
+var back = 'ColorBackground=' + C('white').hex()
+
+var output = [ fore, back, seq, '' ].join('\n')
+
+process.stdout.write(output)
