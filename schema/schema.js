@@ -90,7 +90,7 @@ function create16 (name)
 	var it =
 	{
 		bg:  c,
-		bgn: c.darken(1),
+		bgn: c.darken( .5),
 		fg:  c.darken( .25),
 		fgn: c.darken(1.25)
 	}
@@ -117,8 +117,8 @@ function create16 (name)
 
 	case 'cyan':
 		c = c.set('hsl.h', '-5')
-		it.bg  = c.darken(.65)
-		it.bgn = c.darken(1.65)
+		it.bg  = c.darken(.25)
+		it.bgn = c.darken(.75)
 		break
 
 	}
