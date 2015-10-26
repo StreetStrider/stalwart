@@ -66,8 +66,9 @@ function create16 (name)
 
 	case 'cyan':
 		c = C('cyan')
+		c = c.set('hsl.h', '+10')
 		c = c.desaturate(.5)
-		c = c.darken(1)
+		c = c.darken(.5)
 		break
 
 	case 'magenta':
@@ -118,7 +119,6 @@ function create16 (name)
 		break
 
 	case 'cyan':
-		c = c.set('hsl.h', '-5')
 		it.bg  = c.darken(.25)
 		it.bgn = c.darken(.75)
 		break
