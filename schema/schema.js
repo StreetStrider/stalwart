@@ -61,7 +61,8 @@ function create16 (name)
 
 	case 'blue':
 		c = C('blue')
-		c = c.set('hsl.h', '-25')
+		c = c.set('hsl.h', '-30')
+		c = c.desaturate(.25)
 		break
 
 	case 'cyan':
