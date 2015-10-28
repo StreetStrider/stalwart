@@ -41,11 +41,11 @@ function create16 (name)
 	switch (name)
 	{
 	case 'white':
-		c = schema.bg
+		c = Copy(schema.bg)
 		break
 
 	case 'black':
-		c = schema.fg
+		c = Copy(schema.fg)
 		break
 
 	case 'red':
