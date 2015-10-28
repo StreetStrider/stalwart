@@ -92,12 +92,14 @@ function create16 (name)
 		throw null
 	}
 
+	c = Copy(c)
+
 	var it =
 	{
-		bg:  c,
-		bgn: c.darken( .5),
-		fg:  c.darken( .25),
-		fgn: c.darken(1.25)
+		bg:  Copy(c),
+		bgn: Copy(c).darken( .5),
+		fg:  Copy(c).darken( .25),
+		fgn: Copy(c).darken(1.25)
 	}
 
 	switch (name)
