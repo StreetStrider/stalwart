@@ -17,8 +17,8 @@ schema.accent__b = {}
 schema.accent__b.fg = C('2C7376')
 schema.accent__b.bg = C('148B91')
 
-schema.selection = C('F2FF0077')
-schema.highlight = C('15FF0077')
+schema.highlight = C('a6ff00').alpha(.5)
+schema.selection = Copy(schema.highlight).saturate(.25).set('hsl.h', '-20')
 
 schema.string = {}
 schema.string.bg = C('FFCF6A')
@@ -134,4 +134,9 @@ function create16 (name)
 	var fg = base16.colors.fg[name] = {}
 	fg.bright = it.fg
 	fg.normal = it.fgn
+}
+
+function Copy (color)
+{
+	return C(color.rgba())
 }
