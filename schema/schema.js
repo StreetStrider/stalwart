@@ -49,7 +49,7 @@ function create16 (name)
 		break
 
 	case 'red':
-		c = schema.accent
+		c = Copy(schema.accent)
 		c = c.set('hsl.h', '-15')
 		break
 
