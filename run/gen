@@ -2,9 +2,7 @@
 
 var root = require('./lib/rootpath')
 
-var schema = require(root('schema/schema'))
-
-schema = require('./lib/mustz')(schema)
+var schema = require(root('schema/as-css'))
 
 var fs = require('fs-sync')
 
