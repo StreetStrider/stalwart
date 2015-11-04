@@ -5,3 +5,4 @@ var schema = require('../schema/as-css')
 schema = JSON.stringify(schema, null, '  ')
 
 process.stdout.write(schema)
+process.stdout.write('\n')
