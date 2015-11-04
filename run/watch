@@ -16,3 +16,5 @@ var gen = cmd('run/gen', { cwd: root() })
 watch(paths, gen)
 
 gen()
+
+console.info('watch is up')
