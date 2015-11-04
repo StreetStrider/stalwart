@@ -1,5 +1,7 @@
 ```
 $ npm run gen
+# or
+$ npm run watch
 ```
 
 ```
