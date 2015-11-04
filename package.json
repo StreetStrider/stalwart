@@ -8,7 +8,8 @@
 
 	"scripts":
 	{
-		"gen": "run/gen"
+		"gen":   "run/gen",
+		"watch": "run/watch"
 	},
 
 	"devDependencies":
