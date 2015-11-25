@@ -11,7 +11,7 @@ schema.bg = C('fbfbfb')
 schema.inv = {}
 schema.inv.fg = C('white')
 
-schema.accent = C('CC0025')
+schema.accent = C('CC0058')
 
 schema.accent__b = {}
 schema.accent__b.fg = C('2C7376')
@@ -50,7 +50,6 @@ function create16 (name)
 
 	case 'red':
 		c = Copy(schema.accent)
-		c = c.set('hsl.h', '-15')
 		break
 
 	case 'green':
