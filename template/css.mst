@@ -10,6 +10,11 @@ body
 {
 	color: {{ accent }};
 }
+.accent .bg
+{
+	background: {{ accent }};
+	color: {{ inv.fg }};
+}
 .inv
 {
 	color: {{ inv.fg }};
