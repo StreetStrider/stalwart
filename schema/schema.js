@@ -21,10 +21,10 @@ schema.highlight = C('a6ff00').alpha(.5)
 schema.selection = Copy(schema.highlight).saturate(.25).set('hsl.h', '-20')
 
 schema.string = {}
-schema.string.bg = C('FFCF6A')
+schema.string.bg = C('FFCF6A').alpha(.7)
 
 schema.comment = {}
-schema.comment.bg = C('E8E8E8')
+schema.comment.bg = C('E3E3E3').alpha(.7)
 
 var base16 = schema.base16 = {}
 
