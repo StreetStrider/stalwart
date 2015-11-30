@@ -29,6 +29,15 @@ body
 {
 	margin: .25em;
 }
+.string span::before, .string span::after
+{
+	content: '"';
+}
+.string span.q::before, .string span.q::after
+{
+	content: "'";
+}
+
 
 table
 {
