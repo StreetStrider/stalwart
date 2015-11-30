@@ -21,7 +21,9 @@ schema.highlight = C('a6ff00').alpha(.5)
 schema.selection = Copy(schema.highlight).saturate(.25).set('hsl.h', '-20')
 
 schema.string = {}
+schema.string.fg = C('black')
 schema.string.bg = C('FFCF6A').brighten(.4).alpha(.5)
+schema.string.bg__around = schema.string.bg.brighten(.35)
 
 schema.comment = {}
 schema.comment.bg = C('E3E3E3').alpha(.5)

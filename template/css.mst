@@ -32,7 +32,12 @@ body
 
 .string span
 {
+	color: {{ string.fg }};
 	background: {{ string.bg }};
+}
+.string span::before, .string span::after
+{
+	background: {{ string.bg__around }};
 }
 
 .comment span
