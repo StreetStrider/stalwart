@@ -22,7 +22,7 @@ schema.selection = Copy(schema.highlight).saturate(.25).set('hsl.h', '-20')
 
 schema.string = {}
 schema.string.fg = C('black')
-schema.string.bg = Copy(schema.accent)/*.set('hcl.c', '-10')*/.set('hcl.l', '+20').alpha(.3)
+schema.string.bg = Copy(schema.accent).set('hcl.h', '+10').set('hcl.l', '+13').alpha(.3)
 schema.string.bg__around = schema.string.bg.brighten(1)
 
 schema.comment = {}
