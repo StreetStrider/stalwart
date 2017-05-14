@@ -1,6 +1,6 @@
 
 mixin stylesheet (href)
-	link(rel='stylesheet' href='#{href}')
+	link(rel='stylesheet' href=href)
 
 doctype html
 html
@@ -48,18 +48,18 @@ html
 		table.feature
 			each name in colornames
 				tbody
-					tr(style='#{ bg(base16.bg[name].bright) }')
+					tr(style=bg(base16.bg[name].bright))
 						each name in colornames
-							td(style='#{ fg(base16.fg[name].bright) }') #{name}
+							td(style=fg(base16.fg[name].bright)) #{ name }
 
-					tr(style='#{ bg(base16.bg[name].bright) }')
+					tr(style=bg(base16.bg[name].bright))
 						each name in colornames
-							td(style='#{ fg(base16.fg[name].normal) }') #{name}
+							td(style=fg(base16.fg[name].normal)) #{ name }
 
-					tr(style='#{ bg(base16.bg[name].normal) }')
+					tr(style=bg(base16.bg[name].normal))
 						each name in colornames
-							td(style='#{ fg(base16.fg[name].bright) }') #{name}
+							td(style=fg(base16.fg[name].bright)) #{ name }
 
-					tr(style='#{ bg(base16.bg[name].normal) }')
+					tr(style=bg(base16.bg[name].normal))
 						each name in colornames
-							td(style='#{ fg(base16.fg[name].normal) }') #{name}
+							td(style=fg(base16.fg[name].normal)) #{ name }

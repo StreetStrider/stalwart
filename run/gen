@@ -14,11 +14,11 @@ var css = mustache.render(csst, schema)
 
 fs.write(root('gen/gen.css'), css)
 
-var jade = require('jade')
+var pug = require('pug')
 
-var htmlt = fs.read(root('template/index.jade'))
+var htmlt = fs.read(root('template/index.pug'))
 
-var html = jade.render(htmlt,
+var html = pug.render(htmlt,
 {
 	pretty: true,
 	schema: schema
