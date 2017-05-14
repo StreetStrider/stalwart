@@ -23,21 +23,21 @@
 	"devDependencies":
 	{
 		"mustache":
-			"2.2",
+			"2",
 
 		"pug":
 			"2.0.0-rc.1",
 
 		"fs-sync":
-			"^1.0.1",
+			"1",
 
 		"rootpath":
-			"StreetStrider/rootpath#v1.4.0",
+			"StreetStrider/rootpath#v1.8.0",
 
 		"glob-watcher":
-			"^2",
+			"2",
 
 		"command-promise":
-			"^2"
+			"2"
 	}
 }
