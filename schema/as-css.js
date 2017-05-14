@@ -1,10 +1,15 @@
 
 var traverse = require('traverse')
-var schema = traverse.clone(require('./schema'))
+var clone = traverse.clone
 
-module.exports = traverse(schema).forEach(function (it)
+var is_chroma = require('../run/lib/is-chroma')
+
+var schema = require('./schema')
+
+module.exports = traverse(clone(schema))
+.forEach(function (it)
 {
-	if (it.constructor.name === 'Color') /* this lib is a naughty one */
+	if (is_chroma(it))
 	{
 		this.update(it.css())
 	}
