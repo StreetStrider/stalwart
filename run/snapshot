@@ -1,8 +1,7 @@
 #! /usr/bin/env node
 
 var schema = require('../schema/as-css')
+var dump = require('./lib/dump')
 
-schema = JSON.stringify(schema, null, '  ')
-
-process.stdout.write(schema)
+process.stdout.write(dump(schema))
 process.stdout.write('\n')
