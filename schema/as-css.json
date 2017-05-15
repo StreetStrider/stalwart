@@ -1,0 +1,104 @@
+{
+  "fg": "#333333",
+  "bg": "#fbfbfb",
+  "inv": {
+    "fg": "#ffffff"
+  },
+  "accent": "#cc0058",
+  "accent__b": {
+    "fg": "#2c7376",
+    "bg": "#148b91"
+  },
+  "highlight": "rgba(166,255,0,0.5)",
+  "selection": "rgba(247,255,0,0.5)",
+  "string": {
+    "fg": "#000000",
+    "bg": "rgba(244,69,99,0.3)",
+    "bg__around": "rgba(255,123,145,0.3)"
+  },
+  "comment": {
+    "bg": "rgba(227,227,227,0.5)"
+  },
+  "base16": {
+    "names": [
+      "white",
+      "black",
+      "red",
+      "green",
+      "blue",
+      "cyan",
+      "magenta",
+      "yellow"
+    ],
+    "colors": {
+      "fg": {
+        "white": {
+          "bright": "#ffffff",
+          "normal": "#ffffff"
+        },
+        "black": {
+          "bright": "#292929",
+          "normal": "#000000"
+        },
+        "red": {
+          "bright": "#be004d",
+          "normal": "#870026"
+        },
+        "green": {
+          "bright": "#2aa559",
+          "normal": "#005e19"
+        },
+        "blue": {
+          "bright": "#2a7ff7",
+          "normal": "#004ab7"
+        },
+        "cyan": {
+          "bright": "#2daccc",
+          "normal": "#007c9b"
+        },
+        "magenta": {
+          "bright": "#7b56db",
+          "normal": "#462aa8"
+        },
+        "yellow": {
+          "bright": "#87be00",
+          "normal": "#538d00"
+        }
+      },
+      "bg": {
+        "white": {
+          "bright": "#fbfbfb",
+          "normal": "#e1e1e1"
+        },
+        "black": {
+          "bright": "#333333",
+          "normal": "#202020"
+        },
+        "red": {
+          "bright": "#cc0058",
+          "normal": "#b00043"
+        },
+        "green": {
+          "bright": "#3ab164",
+          "normal": "#15984e"
+        },
+        "blue": {
+          "bright": "#3886ff",
+          "normal": "#0069dd"
+        },
+        "cyan": {
+          "bright": "#2daccc",
+          "normal": "#0094b4"
+        },
+        "magenta": {
+          "bright": "#8861e8",
+          "normal": "#6e4bce"
+        },
+        "yellow": {
+          "bright": "#94ca00",
+          "normal": "#7ab100"
+        }
+      }
+    }
+  }
+}

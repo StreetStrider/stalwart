@@ -1,29 +1,39 @@
 #! /usr/bin/env node
 
+var fs = require('fs-sync')
+var read  = fs.read
+var write = fs.write
+
 var root = require('./lib/rootpath')
+var dump = require('./lib/dump')
 
 var schema = require(root('schema/as-css'))
+var schema_hexa = require(root('schema/as-hexa'))
 
-var fs = require('fs-sync')
-
-var csst = fs.read(root('template/css.mst'))
-
-var mustache = require('mustache')
-
-var css = mustache.render(csst, schema)
-
-fs.write(root('gen/gen.css'), css)
-
-var pug = require('pug')
-
-var htmlt = fs.read(root('template/index.pug'))
-
-var html = pug.render(htmlt,
 {
-	pretty: true,
-	schema: schema
-})
+	var mustache = require('mustache')
 
-fs.write(root('gen/index.html'), html)
+	var css_template = read(root('template/css.mst'))
+	var css = mustache.render(css_template, schema)
 
-fs.copy(root('template/static.css'), root('gen/static.css'), { force: true })
+	write(root('gen/gen.css'), css)
+}
+
+{
+	var pug = require('pug')
+
+	var html_template = read(root('template/index.pug'))
+	var html = pug.render(html_template,
+	{
+		pretty: true,
+		schema: schema
+	})
+
+	write(root('gen/index.html'), html)
+	fs.copy(root('template/static.css'), root('gen/static.css'), { force: true })
+}
+
+{
+	write(root('schema/as-css.json'), dump(schema) + '\n')
+	write(root('schema/as-hexa.json'), dump(schema_hexa) + '\n')
+}
