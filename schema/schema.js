@@ -6,7 +6,7 @@ var C = require('chroma-js')
 var schema = module.exports = {}
 
 schema.fg = C('333')
-schema.bg = C('fbfbfb')
+schema.bg = C('FBFBFB')
 
 schema.inv = {}
 schema.inv.fg = C('white')
@@ -17,7 +17,7 @@ schema.accent__b = {}
 schema.accent__b.fg = C('2C7376')
 schema.accent__b.bg = C('148B91')
 
-schema.highlight = C('a6ff00').alpha(.5)
+schema.highlight = C('A6FF00').alpha(.5)
 schema.selection = Copy(schema.highlight).saturate(.25).set('hsl.h', '-20')
 
 schema.string = {}
