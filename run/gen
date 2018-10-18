@@ -37,3 +37,41 @@ var schema_hexa = require(root('schema/as-hexa'))
 	write(root('schema/as-css.json'), dump(schema) + '\n')
 	write(root('schema/as-hexa.json'), dump(schema_hexa) + '\n')
 }
+
+{
+	function traverse (tree, prefix = [ 'stalwart'])
+	{
+		var r = []
+
+		for (var key in tree)
+		{
+			var value = tree[key]
+
+			if (typeof value === 'string')
+			{
+				var pkey = prefix.concat(key).join('__')
+
+				r.push([ pkey, value ])
+			}
+			else if (Array.isArray(value))
+			{
+			}
+			else if (Object(value) === value)
+			{
+				r = r.concat(traverse(value, prefix.concat(key)))
+			}
+		}
+
+		return r
+	}
+
+	var pairs = traverse(schema)
+	var lines = pairs.map(([ key, value ]) =>
+	{
+		return `@${ key }: ${ value };`
+	})
+
+	var text = '\n' + lines.join('\n') + '\n'
+
+	write(root('schema/schema.less'), text)
+}
